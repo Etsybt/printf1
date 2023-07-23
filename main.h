@@ -85,7 +85,7 @@ int print_start_end(char *start, char *end, char *except);
 
 /* Funciotns to handle other specifiers */
 int (*get_spec(char *i))(va_list list, p_t *p);
-int get_print_func(char *s, va_list list, p_t *p);
+int get_print_func(char *i, va_list list, p_t *p);
 
 int get_flags(char *i, p_t *p);
 int get_modifiers(char *i, p_t *p);
