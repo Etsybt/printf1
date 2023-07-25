@@ -6,7 +6,7 @@
   */
 int (*get_spec(char *i))(va_list list, p_t p)
 {
-	spect_t spec[] = {
+	spec_t spec[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
@@ -16,7 +16,7 @@ int (*get_spec(char *i))(va_list list, p_t p)
 		{"u", print_unsigned},
 		{"o", print_octal},
 		{"X", print_hexa_upper},
-		{"x", print_hexa},
+		{"x", print_hex},
 		{"S", print_S},
 		{"p", print_address},
 		{"r", print_rev},
