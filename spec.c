@@ -4,7 +4,7 @@
   * @i: str
   * Return: num of bytes
   */
-int (*get_spec(char *i))(va_list list, p_t p)
+int (*get_spec(char *i))(va_list list, p_t *p)
 {
 	spec_t specs[] = {
 		{"c", print_char},
