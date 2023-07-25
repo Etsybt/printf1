@@ -56,7 +56,7 @@ int print_string(va_list list, p_t *p)
     (void)p;
     switch ((int) (!str))
         case 1:
-            str = NULL_STRING;
+            str = NULL_STR;
 
     j = pad = _strlen(str);
     if (p->precision < pad)
@@ -68,7 +68,7 @@ int print_string(va_list list, p_t *p)
             for (i = 0; i < pad; i++)
                 sum += _putchar(*str++);
         else 
-            sum += _putchar(str);
+            sum += _puts(str);
     }
     while (j++ < p->width)
         sum += _putchar(pad_char);
@@ -78,9 +78,9 @@ int print_string(va_list list, p_t *p)
             for (i = 0; i < pad; i++)
                 sum += _putchar(*str++);
         else
-            sum += _puts(str)
+            sum += _puts(str);
     }
-    return (sum)
+    return (sum);
 }
 
 /**
@@ -111,7 +111,7 @@ int print_S(va_list list, p_t *p)
     int sum = 0;
 
     if ((int)(!str))
-        return (_puts(NULL_STRING));
+        return (_puts(NULL_STR));
     for (; *str; str++)
     {
         if((*str > 0 && *str < 32) || *str >= 127)

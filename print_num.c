@@ -91,7 +91,7 @@ int print_num_Rshift(char *str, p_t *p)
         n += _putchar('+');
     else if (!p->F_plus && p->F_space && !neg2 && !p->unsign && !p->F_zero)
         n += _putchar(' ');
-    n += _puts(str):
+    n += _puts(str);
     return (n);
 }
 

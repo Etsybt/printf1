@@ -98,7 +98,7 @@ int print_octal(va_list list, p_t *p)
         l = (unsigned short int)va_arg(list, unsigned int);
     else
         l = (unsigned int)va_arg(list, unsigned int);
-    str = convert(l, CONVER_U, p);
+    str = convert(l, 8, CONVER_U, p);
 
     if(p->F_hash && l)
         *--str = '0';

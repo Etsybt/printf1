@@ -1,5 +1,3 @@
----- simple_printers----
-
 #include "main.h"
 
 /**
@@ -41,7 +39,7 @@ int print_rev(va_list list, p_t *p)
         for (len = 0; *str; str++)
             len++;
         str--;
-        for (; len > 0; len--; str--)
+        for (; len > 0; len--, str--)
             sum += _putchar(*str);
     }
     return (sum);

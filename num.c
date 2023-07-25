@@ -12,6 +12,7 @@ char *convert(long int num, int b, int flags, p_t *p)
 {
     static char *array;
     static char buffer[50];
+    char sign = 0;
     char *ptr;
     unsigned long n = num;
     (void)p;
@@ -63,7 +64,7 @@ int print_unsigned(va_list list, p_t *p)
 *
 * Return: bytes printed
 */
-int print_address(va_list list, p_t, *p)
+int print_address(va_list list, p_t *p)
 {
     unsigned long int n = va_arg(list, unsigned long int);
     char *str;
