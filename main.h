@@ -76,7 +76,7 @@ int print_binary(va_list list, p_t *p);
 int print_unsigned(va_list list, p_t *p);
 int print_octal(va_list list, p_t *p);
 int print_hexa_upper(va_list list, p_t *p);
-int print_hexa(va_list list, p_t *p);
+int print_hex(va_list list, p_t *p);
 int print_S(va_list list, p_t *p);
 int print_address(va_list list, p_t *p);
 
