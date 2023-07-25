@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 		}
 		n = get_width(n, &p, list);
 		n = get_precision(n, &p, list);
-		if (get_modifiers(n, &p, list))
+		if (get_modifiers(n, &p))
 			n++;
 		if (!get_spec(n))
 			result += print_start_end(start, n,
