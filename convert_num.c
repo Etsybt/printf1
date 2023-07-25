@@ -20,14 +20,14 @@ int print_hex(va_list list, p_t  *p)
     else 
         l = (unsigned int)va_arg(list, unsigned int);
 
-    str = convert(l, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, p);
+    str = convert(l, 16, CONVER_U | CONVER_L, p);
     if (p->F_hash && l)
     {
         *--str = 'x';
-        *--str = '0'
+        *--str = '0';
     }
     p->unsign = 1;
-    return (c += print_num(str, p))
+    return (c += print_num(str, p));
 }
 
 /**
@@ -50,7 +50,7 @@ int print_hexa_upper(va_list list, p_t *p)
     else 
         l = (unsigned int)va_arg(list, unsigned int);
     
-    str = convert(l, 16, CONVERT_UNSIGNED, p);
+    str = convert(l, 16, CONVER_U, p);
     if (p->F_hash && l)
     {
         *--str = 'X';
@@ -70,7 +70,7 @@ int print_hexa_upper(va_list list, p_t *p)
 int print_binary(va_list list, p_t *p)
 {
     unsigned int n = va_arg(list, unsigned int);
-    char *str = convert(n, 2, CONVERT_UNSIGNED, p);
+    char *str = convert(n, 2, CONVER_U, p);
     int c = 0;
 
     if (p->F_hash && n)
@@ -98,7 +98,7 @@ int print_octal(va_list list, p_t *p)
         l = (unsigned short int)va_arg(list, unsigned int);
     else
         l = (unsigned int)va_arg(list, unsigned int);
-    str = convert(l, CONVERT_UNSIGNED, p);
+    str = convert(l, CONVER_U, p);
 
     if(p->F_hash && l)
         *--str = '0';
