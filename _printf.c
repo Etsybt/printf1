@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 			n++;
 		if (!get_spec(n))
 			result += print_start_end(start, n,
-					p.l_length_modifier || p.h_length_modifier ? (n = 1) : 0);
+					p.l_length_modifier || p.h_length_modifier ? n - 1 : 0);
 		else
 			result += get_print_func(n, list, &p);
 	}
