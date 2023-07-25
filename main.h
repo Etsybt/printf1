@@ -27,19 +27,19 @@
  */
 typedef struct p
 {
-	unsigned int F_plus : 1;
-	unsigned int F_space : 1;
-	unsigned int F_hash : 1;
-	unsigned int F_zero : 1;
-	unsigned int F_minus : 1;
+	unsigned int F_plus            : 1;
+	unsigned int F_space           : 1;
+	unsigned int F_hash            : 1;
+	unsigned int F_zero            : 1;
+	unsigned int F_minus           : 1;
 
 	unsigned int l_length_modifier : 1;
 	unsigned int h_length_modifier : 1;
 
-	unsigned int width : 1;
-	unsigned int precision : 1;
+	unsigned int width;
+	unsigned int precision;
 
-	unsigned int unsign : 1;
+	unsigned int unsign            : 1;
 
 } p_t;
 
