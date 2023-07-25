@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	int result = 0;
 	va_list list;
 	char *n, *start;
-	p_t p = PARAMS_INIT;
+	p_t p = init_params;
 
 	va_start(list, format);
 
@@ -33,12 +33,12 @@ int _printf(const char *format, ...)
 			n++;
 		}
 		n = get_width(n, &p, list);
-		n = get_precision(n, &pn list);
+		n = get_precision(n, &p, list);
 		if (get_modifiers(n, &p))
 			n++;
 		if (!get_spec(n))
 			result += print_start_end(start, n,
-					p.l_length_modifier || p.h_length_modifier ? n = 1 : 0);
+					p.l_length_modifier || p.h_length_modifier ? (n = 1) : 0);
 		else
 			result += get_print_func(n, list, &p);
 	}

@@ -8,6 +8,8 @@
   */
 void init_params(p_t *p, va_list list)
 {
+	p->unsign = 0;
+
 	p->F_plus = 0;
 	p->F_space = 0;
 	p->F_hash = 0;
@@ -20,6 +22,5 @@ void init_params(p_t *p, va_list list)
 	p->h_length_modifier = 0;
 	p->l_length_modifier = 0;
 
-	p->unsign = 0;
 	(void)list;
 }
