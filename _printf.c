@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	int result = 0;
 	va_list list;
 	char *n, *start;
-	p_t p = init_params;
+	p_t p = P_init;
 
 	va_start(list, format);
 

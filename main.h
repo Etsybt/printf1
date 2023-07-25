@@ -11,7 +11,7 @@
 #define BUFF_SIZE 1024
 
 #define NULL_STR "(null)"
-#define F_init (0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+#define P_init (0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 /**
   * struct p - struct of parameters
   * @F_plus: flag if + specified
