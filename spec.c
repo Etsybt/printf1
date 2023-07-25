@@ -6,7 +6,7 @@
   */
 int (*get_spec(char *i))(va_list list, p_t p)
 {
-	spec_t spec[] = {
+	spec_t specs[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
@@ -25,11 +25,11 @@ int (*get_spec(char *i))(va_list list, p_t p)
 	};
 	int n = 0;
 
-	while (spec[n].spec)
+	while (specs[n].spec)
 	{
-		if (*i == spec[n].spec[0])
+		if (*i == specs[n].spec[0])
 		{
-			return (spec[n].func);
+			return (specs[n].func);
 		}
 		n++;
 	}
